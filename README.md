@@ -1,45 +1,76 @@
-# DNA Sequence Simulation and Mutation
+# NumPy Mini Projects – DNA & Gene Expression
 
-This project demonstrates the simulation and analysis of DNA sequences using Python and NumPy. It showcases fundamental bioinformatics techniques including sequence generation, mutation simulation, nucleotide frequency analysis, and numeric representation of DNA sequences for computational purposes.
+This repository contains two beginner-friendly projects built using **Python** and **NumPy**. Both projects highlight how NumPy can be applied in the context of **bioinformatics and biological data analysis**.
 
-## Project Overview
+---
 
-The main goal of this project is to model DNA sequences and understand how mutations can alter them. This provides a foundation for studying genetic variability, computational genomics, and preparing DNA sequences for further data analysis or machine learning applications.
+## Project 1: DNA Sequence Simulation and Mutation
 
-## Methodology
+### Overview
+This project demonstrates how to simulate DNA sequences computationally using NumPy. It includes generating randomized DNA sequences, introducing mutations, analyzing nucleotide frequency, and converting DNA symbols into a numeric representation.
 
-The project follows these key steps:
+### Workflow
+- **Sequence Generation:** Generate a random DNA sequence of a specified length (`A`, `T`, `G`, `C`).
+- **Mutation Simulation:** Randomly mutate selected positions in the sequence to mimic biological mutation.
+- **Frequency Analysis:** Count how often each nucleotide appears in the sequence.
+- **Numeric Encoding:** Convert nucleotides into numeric values (`A=0, T=1, G=2, C=3`) for computational analysis.
 
-1. **Random DNA Sequence Generation**  
-   A DNA sequence of a specified length is generated randomly using the four nucleotides: Adenine (A), Thymine (T), Guanine (G), and Cytosine (C). This simulates the creation of a DNA strand in a computational environment.
+### Learning Outcomes
+- Representing biological sequences with NumPy arrays.
+- Understanding random mutation processes computationally.
+- Performing frequency analysis with array operations.
+- Preparing biological data for numeric analysis and machine learning.
 
-2. **Introducing Random Mutations**  
-   Specific positions within the DNA sequence are selected randomly, and the nucleotides at these positions are replaced with a different nucleotide. This models the natural mutation process, where changes in the genetic sequence can occur.
+---
 
-3. **Counting Nucleotide Frequencies**  
-   After mutations, the project counts the frequency of each nucleotide in the DNA sequence. This helps visualize how mutations affect the composition of the DNA strand and allows for statistical analysis of nucleotide distribution.
+## Project 2: Gene Expression Dataset (Yeast Data)
 
-4. **Numeric Representation of DNA**  
-   Each nucleotide is mapped to a numerical value (A=0, T=1, G=2, C=3). Converting DNA sequences into numeric form is useful for computational analyses, including machine learning, pattern recognition, and further bioinformatics studies.
+### Overview
+This project analyzes a real biological dataset: the **Yeast Protein Localization dataset** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/yeast). It demonstrates how to handle, preprocess, normalize, and analyze gene expression data.
 
-## Example Workflow
+### Workflow
+1. **Data Loading:** Import the yeast dataset into NumPy.
+2. **Data Separation:** Split the dataset into protein IDs, numerical features, and localization labels.
+3. **Normalization:** Scale all numeric values so they range between 0 and 1.
+4. **Statistical Analysis:**  
+   - Calculate per-protein mean values.  
+   - Calculate feature means across all proteins.  
+   - Identify global maximum and minimum values in the dataset.  
+5. **Group Analysis:** Compare average feature values for proteins in different localizations (e.g., mitochondria `MIT` vs. nucleus `NUC`).
+6. **Result Export:** Save the normalized dataset to CSV for future analysis.
 
-- A random DNA sequence of 20 nucleotides is generated.  
-- Three random positions are chosen for mutation.  
-- The nucleotides at these positions are replaced with a different nucleotide.  
-- The mutated DNA sequence is displayed along with nucleotide frequencies.  
-- Finally, the DNA sequence is converted into a numeric array for computational purposes.
+### Learning Outcomes
+- Handling real-world biological datasets with NumPy.
+- Data cleaning and normalization for analysis.
+- Using masks for label-specific filtering in NumPy.
+- Exporting processed datasets for downstream tasks.
 
-## Applications
+---
 
-This project has multiple applications in bioinformatics and computational biology:
+## Concepts and Skills Covered
+- DNA sequence representation and mutation simulation.
+- Biological sequence numeric encoding.
+- Statistical analysis on biological datasets.
+- NumPy operations for preprocessing and normalization.
+- Practical bioinformatics with Python.
 
-- Studying mutation effects on DNA sequences.
-- Preparing sequences for machine learning models.
-- Understanding nucleotide composition and statistical properties of DNA.
-- Educational tool for learning basic bioinformatics operations.
+---
 
-## Conclusion
+## How to Run
 
-This project provides a simple yet effective simulation of DNA sequences and mutations. By combining sequence generation, mutation modeling, frequency analysis, and numeric representation, it demonstrates key bioinformatics concepts and prepares DNA sequences for computational analysis in research or education.
+1. Clone or download this repository.
+2. Place the dataset (`yeast.data`) in the project folder (for Project 2).
+3. Run the Python scripts:
+   - `dna_sequence_simulation.py` → Project 1  
+   - `yeast_dataset_analysis.py` → Project 2  
+
+---
+
+## Requirements
+
+- Python 3.x  
+- NumPy  
+
+
+
 
